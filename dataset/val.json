@@ -1,0 +1,18 @@
+[
+    "contactdb/knife",
+    "contactdb/cube_medium",
+    "contactdb/cell_phone",
+    "contactdb/cylinder_small",
+    "contactdb/cylinder_medium",
+    "contactdb/cylinder_large",
+    "ycb/potted_meat_can",
+    "ycb/pudding_box",
+    "ycb/plum",
+    "contactdb/banana",
+    "ycb/tomato_soup_can",
+    "ycb/lemon",
+    "contactdb/sphere_medium",
+    "contactdb/pyramid_small",
+    "ycb/pear",
+    "contactdb/ps_controller"
+]

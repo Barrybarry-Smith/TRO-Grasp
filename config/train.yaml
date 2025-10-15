@@ -1,0 +1,72 @@
+dataset:
+  robot_names:
+    - 'allegro'
+    - 'barrett'
+    - 'shadowhand'
+  debug_object_names: null
+
+  batch_size: 16
+  num_workers: 8
+  object_pc_type: 'random'  # 'fixed', 'random', 'partial'
+
+model:
+  vqvae_cfg:
+    n_embeddings: 1024
+    embedding_dim: 16
+    num_point: 25
+    num_dim: 64
+    local_decode_pts: 40
+    beta: 0.25
+  vqvae_pretrain: 'ckpt/vqvae.ckpt'
+  object_patch: 25
+  max_link_node: 25
+  robot_links:
+    barrett: 10
+    allegro: 21
+    shadowhand: 17
+  bps_config:
+    bps_type: 'random_uniform'
+    n_bps_points: 124
+    radius: 1.0
+    n_dims: 3
+  N_t_training: 10
+  diffusion_config:
+    scheduling: linear
+    M: 1000
+    beta_min: 0.0001
+    beta_max: 0.02
+    ddim_steps: 100
+    ddim_eta: 1.0
+    lambda: 0.2
+  denoiser_config:
+    t_embed_dim: 200
+    V_object_dims: [3, 1, 64]
+    V_robot_dims: [3, 3, 128]
+    E_or_dims: [3, 3]
+    E_rr_dims: [3, 3]
+    v_conv_dim: 384
+    e_conv_dim: 384
+    num_layers: 6
+    c_atten_head: 32
+    v_out_hidden_dims: [256, 128]
+    e_out_hidden_dims: [256, 128]
+    se3_out_dim: [3, 3]
+  inference_config: False
+  embodiment:
+    - 'allegro'
+    - 'barrett'
+    - 'shadowhand'
+  mode: "train"
+  loss_config:
+    trans_weight: 1.0
+    rot_weight: 1.0
+
+train:
+  lr: 1e-4
+  epochs: 300
+  lr_step: 20
+  lr_gamma: 0.8
+  save_interval: 10
+  save_dir: 'graph_exp/multi_hand'
+  project_name: 'multi_hand'
+  resume_from: False
