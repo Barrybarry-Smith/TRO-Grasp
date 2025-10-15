@@ -10,13 +10,10 @@ Official Code Repository for **$\mathcal{T(R,O)}$ Grasp: Efficient Graph Diffusi
 
 
 <p align="center">
-    <a href='https://arxiv.org/abs/2410.01702'>
+    <a href='https://arxiv.org/abs/2510.12724'>
       <img src='https://img.shields.io/badge/Paper-arXiv-red?style=plastic&logo=arXiv&logoColor=red' alt='Paper arXiv'>
     </a>
-    <a href='https://arxiv.org/pdf/2410.01702'>
-      <img src='https://img.shields.io/badge/Paper-PDF-FF9547?style=plastic&logo=adobeacrobatreader&logoColor=FF9547' alt='Paper PDF'>
-    </a>
-    <a href='https://nus-lins-lab.github.io/drograspweb/'>
+    <a href='https://nus-lins-lab.github.io/trograspweb/'>
       <img src='https://img.shields.io/badge/Project-Page-66C0FF?style=plastic&logo=Google%20chrome&logoColor=66C0FF' alt='Project Page'>
     </a>
 </p>
