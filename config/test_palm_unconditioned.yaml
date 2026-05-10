@@ -42,7 +42,7 @@ model:
   denoiser_config:
     t_embed_dim: 200
     V_object_dims: [3, 1, 64]
-    V_robot_dims: [3, 3, 128]
+    V_robot_dims: [3, 3, 64]
     E_or_dims: [3, 3]
     E_rr_dims: [3, 3]
     v_conv_dim: 384
